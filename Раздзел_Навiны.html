@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang='be'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Навiны</title>
+        <!-- Шрифт для заголовков font-family:'Neucha', cursive; -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+        <!-- Шрифт для основного текста font-family:'Nunito', sans-serif; -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <!-- Шрифт для Баюрка font-family: 'Pangolin', cursive; -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+        <style>
+            body{
+                margin:0px;
+                position:relative;
+            }    
+            div{
+                overflow:hidden;
+                position:relative;
+                display:block;
+                font-family:'Nunito', sans-serif;
+            }
+/* Меню */
+            .menu{
+                width:100%;
+                background-color:#98ac9d;
+                font-family:'Nunito', sans-serif;
+            }
+            .menu a{
+                display:inline;
+                position:relative;
+                top:6px;
+                margin-left:25px;
+                font-size:25px;
+                color:#000000;
+                text-decoration:none;
+                font-weight:normal;
+            }
+            .n_menu a{
+                top:22px;
+            }
+            .v_menu{
+                height:50px;
+            }
+            .n_menu{
+                height:75px;
+            }
+            .menu a:hover{
+                color:#323833;
+                font-weight:bolder;
+            }
+            .v_menu form{
+                position:absolute;
+                right:10px;
+                top:10px;
+                height:30px;
+                width:300px;
+            }
+            .n_menu form{
+                position:absolute;
+                right:10px;
+                bottom:10px;
+                height:60px;
+                width:400px;
+            }
+            .menu form input{
+                font-size:20px;
+                position:absolute;
+                border:none;
+                background-color:#ffffff;
+                padding-left:7px;
+                padding-right:0px;
+                padding-top:0px;
+                padding-bottom:0px;
+                right:30px;
+                font-family:'Nunito', sans-serif;
+                height:30px;
+            }
+            .menu form input:focus{
+                background-color:rgb(229, 236, 232);
+            }
+            .v_menu form input{
+                width:270px;
+            }
+            .n_menu form input{
+                width:330px;
+                bottom:0px;
+            }
+            .menu form input:focus{
+                outline:none;
+            }
+            .menu form input.knopka{
+                width:30px;
+                padding-left:0px;
+                position:absolute;
+                background-color:#525a55;
+                background-size:100% 100%;
+                color:#00000000;
+            }
+            .v_menu form input.knopka_shukat{
+                background-image:url('Малюначкі/poshuk.png');
+            }
+            .n_menu form input.knopka_otpravit{
+                background-image:url('Малюначкі/poshuk — копия.png');
+            }
+            .menu form input.knopka:hover{
+                animation-name:knopka_shukat;
+                animation-duration:.5s;
+                animation-fill-mode:forwards;
+            }
+            .v_menu form input.knopka_shukat:hover{
+                animation-name:knopka_shukat;
+            }
+            .n_menu form input.knopka_otpravit:hover{
+                animation-name:knopka_otpravit;
+            }
+            @keyframes knopka_shukat{
+                0%{
+                    width:30px;
+                    background-image:none;
+                }
+                100%{
+                    width:90px;
+                    color:#ffffff;
+                    background-image:none;
+                }
+            }
+            @keyframes knopka_otpravit{
+                0%{
+                    width:30px;
+                    background-image:none;
+                }
+                100%{
+                    width:110px;
+                    color:#ffffff;
+                    background-image:none;
+                }
+            }
+            .n_menu form p{
+                font-size:20px;
+                margin:0px;
+                display:block;
+                width:100%;
+                height:30px;
+                text-align:center;
+            }
+/* Баюрк */
+            .baurk{
+                width:100%;
+                height:500px;
+                background-size:100% 100%;
+                background-color:#7c918179;
+                background-image:url('Малюначкі/wehd.jpg');
+            }
+            .baurk div{
+                font-size:250px;
+                position:absolute;
+                top:140px;
+                left:140px;
+                color:#ffffff;
+                height:400px;
+                text-align:right;
+                font-family: 'Pangolin', cursive;
+            }
+            .baurk div span{
+                font-family:'Neucha', cursive;
+                font-size:150px;
+            }
+/* Разделы */
+            .z_razdela{
+                width:100%;
+                height:80px;
+                background-color:#98ac9d;
+            }
+            .z_razdela p{
+                width:100%;
+                height:73px;
+                font-size:50px;
+                color:#000000;
+                text-align:center;
+                position:absolute;
+                margin:0px;
+                bottom:0px;
+                font-family:'Neucha', cursive;
+            }
+            .razdel{
+                width:100%;
+                height:80px;
+                background-color:#292c2b;
+                background-size:100% 100%;
+            }
+            .naviny{
+                background-image:url('Малюначкі/Фон_2.jpg');
+                height:2260px;
+            }
+            .razdel .razdel{
+                width:80%;
+                margin-left:10%;
+                margin-right:10%;
+                height:100%;
+                background-color:#ffffff;
+                background-image:none;
+            }
+            .naviny .naviny .kartinki{
+                background-color:#bdc8cc;
+                background-size:100% 100%;
+                display:block;
+                position:absolute;
+                margin:0px;
+                height:300px;
+                left:20px;
+            }
+            .naviny .naviny .text{
+                background-color:#d8e3e7;
+                display:block;
+                position:absolute;
+                margin:0px;
+                height:300px;
+                font-size:30px;
+                text-align:left;
+                padding-left:20px;
+                right:20px;
+            }
+            .naviny .naviny .kartinka_1{
+                width:33%;
+                top:20px;
+                background-image:url('Малюначкі/104715202-abstract-polygonal-pattern-luxury-dark-blue-with-gold.jpg');
+            }
+            .naviny .naviny .text_1{
+                width:67%;
+                top:20px;
+            }
+            .naviny .naviny .kartinka_2{
+                width:26%;
+                top:340px;
+                background-image:url('Малюначкі/2d0f796f4655baeca812ed1b7af9abf7.jpg');
+            }
+            .naviny .naviny .text_2{
+                width:74%;
+                top:340px;
+            }
+            .naviny .naviny .kartinka_3{
+                width:30%;
+                top:660px;
+                background-image:url('Малюначкі/fon_nebo_tochki_svet_83482_300x168.jpg');
+            }
+            .naviny .naviny .text_3{
+                width:70%;
+                top:660px;
+            }
+            .naviny .naviny .kartinka_4{
+                width:36%;
+                top:980px;
+                background-image:url('Малюначкі/590328518_640x360.jpg');
+            }
+            .naviny .naviny .text_4{
+                width:64%;
+                top:980px;
+            }
+            .naviny .naviny .kartinka_5{
+                width:24%;
+                top:1300px;
+                background-image:url('Малюначкі/xecooboi-goluboj-mramornyj-fon-1568546374.jpg.pagespeed.ic.x2zH7t_AGn.jpg');
+            }
+            .naviny .naviny .text_5{
+                width:76%;
+                top:1300px;
+            }
+            .naviny .naviny .kartinka_6{
+                width:32%;
+                top:1620px;
+                background-image:url('Малюначкі/depositphotos_170344426-stock-photo-wooden-background.jpg');
+            }
+            .naviny .naviny .text_6{
+                width:68%;
+                top:1620px;
+            }
+            .naviny .naviny .kartinka_7{
+                width:37%;
+                top:1940px;
+                background-image:url('Малюначкі/abstract-cement-concrete-background-grunge-texture-wallpaper-trendy-monochrome-blue-and-calm-color_80743-3029 (1).jpg');
+            }
+            .naviny .naviny .text_7{
+                width:63%;
+                top:1940px;
+            }
+            .naviny .naviny .text h1{
+                font-size:40px;
+                font-weight:normal;
+            }
+            .naviny .naviny .text h1 span{
+                font-size:20px;
+                font-weight:normal;
+                position:absolute;
+                right:40px;
+            }
+        </style>
+    </head>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <body>
+<!-- Верхнее меню -->
+        <div class='menu v_menu'>
+            <a href='Галоўная_старонка.html'>Баюрк</a>
+            <a href='Раздзел_Мульты.html'>Мультфільмы</a>
+            <a href='Раздзел_Пра_нас.html'>Пра нас</a>
+            <a href='Раздзел_Навiны.html'>Навiны</a>
+            <a href='Раздзел_Кантакты.html'>Кантакты</a>
+            <form action='' method='get'>
+                <input type='text' placeholder='Пошук'>
+                <input type='submit' class='knopka knopka_shukat' value='Шукаць'>
+            </form>
+        </div>
+<!-- Баюрк -->
+        <div class='baurk'><div>Н<span>авiны</span></div></div>
+<!-- Раздел Навiны -->
+        <div class='z_razdela'><p>Навiны</p></div>
+        <div class='razdel naviny'>
+            <div class='razdel naviny'>
+                <div class='kartinki kartinka_1'></div>
+                <div class='text text_1'><p><h1>Навiна 1<span>20.01.2020</span></h1>Навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны</p></div>
+                <div class='kartinki kartinka_2'></div>
+                <div class='text text_2'><p><h1>Навiна 2<span>20.01.2020</span></h1>Навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны</p></div>
+                <div class='kartinki kartinka_3'></div>
+                <div class='text text_3'><p><h1>Навiна 3<span>20.01.2020</span></h1>Навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны</p></div>
+                <div class='kartinki kartinka_4'></div>
+                <div class='text text_4'><p><h1>Навiна 4<span>20.01.2020</span></h1>Навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны</p></div>
+                <div class='kartinki kartinka_5'></div>
+                <div class='text text_5'><p><h1>Навiна 5<span>20.01.2020</span></h1>Навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны</p></div>
+                <div class='kartinki kartinka_6'></div>
+                <div class='text text_6'><p><h1>Навiна 6<span>20.01.2020</span></h1>Навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны</p></div>
+                <div class='kartinki kartinka_7'></div>
+                <div class='text text_7'><p><h1>Навiна 7<span>20.01.2020</span></h1>Навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны навiны</p></div>
+            </div>
+        </div>
+<!-- Нижнее меню -->
+        <div class='menu n_menu'>
+            <a href='Галоўная_старонка.html'>Баюрк</a>
+            <a href='Раздзел_Мульты.html'>Мультфільмы</a>
+            <a href='Раздзел_Пра_нас.html'>Пра нас</a>
+            <a href='Раздзел_Навiны.html'>Навiны</a>
+            <a href='Раздзел_Кантакты.html'>Кантакты</a>
+            <form>
+                <p>Падпісацца на рассылку</p>
+                <input type='text' placeholder='Электронная пошта'>
+                <input type='submit' class='knopka knopka_otpravit' value='Адправіць'>
+            </form>
+        </div>
+    </body>
+</html>
